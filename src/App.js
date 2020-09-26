@@ -9,6 +9,7 @@ import Login from './components/Login';
 import Logout from './components/Logout';
 import Auth from './components/Auth';
 import Home from './components/Home';
+import CardDetail from './components/CardDetail';
 
 export default class App extends Component {
   render() {
@@ -21,6 +22,7 @@ export default class App extends Component {
           <Auth>
             <Switch>
               <Route exact path="/" component={Home} />
+              <Route exact path="/detail" component={CardDetail} />
             </Switch>
           </Auth>
         </Switch>
