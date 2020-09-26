@@ -1,0 +1,5 @@
+curl -H 'Content-Type:application/json' -d '{"problemUrl":"https://atcoder.jp/contests/abc144/tasks/abc144_f","code":"#include <cstdio>\n#include <cstdlib>\n \"printf\"","comment":"### テスト","solvedFlag":true}' https://atcoder-memory.herokuapp.com//addCard
+curl -H 'Content-Type:application/json' -d '{"cardsUuid": "7de82882-64c6-4441-8f59-12aec66cd374", "submissionUrl": "https://atcoder.jp/contests/abc144/submissions/16997920"}' localhost:8080/addSubmissionUrl
+curl localhost:8080/getCardList
+curl -H 'Content-Type:application/json' -d '{"uuid": "7de82882-64c6-4441-8f59-12aec66cd374"}' localhost:8080/getSubmissionUrlList
+curl localhost:8080/getSubmissionUrlList/7de82882-64c6-4441-8f59-12aec66cd374
