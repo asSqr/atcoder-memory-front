@@ -14,10 +14,20 @@ const useStyles = makeStyles({
     minWidth: 640,
     background: 'rgb(255,255,255)',
   },
+  appbarRoot: {
+    flexGrow: 1,
+  },
   bullet: {
     display: 'inline-block',
     margin: '0 2px',
     transform: 'scale(0.8)',
+  },
+  right: {
+    marginLeft: 'auto',
+  },
+  white: {
+    color: 'white',
+    fontSize: 20,
   },
   title: {
     fontSize: 14,
@@ -120,11 +130,18 @@ const Home = () => {
 
   return (
     <div>
-      <AppBar position="static">
-        <Toolbar>
-          <Typography variant="h6"><Link to="/edit" style={{ textDecoration: 'none' }}>Create Card</Link></Typography>
-        </Toolbar>
-      </AppBar>
+      <div className={classes.appbarRoot}>
+        <AppBar position="static">
+          <Toolbar>
+            <Typography variant="h6">
+              AtCoder Memory
+            </Typography>
+            <div className={classes.right}>
+              <Link to="/edit" style={{ textDecoration: 'none' }}><Button className={classes.white} color="inherit">Create Card</Button></Link>
+            </div>
+          </Toolbar>
+        </AppBar>
+      </div>
       <div>
         {cardComponents}
       </div>
