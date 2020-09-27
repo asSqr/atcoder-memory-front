@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
+import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
@@ -109,7 +111,7 @@ const Home = () => {
         </CardContent>
         <CardActions>
           <Button size="large">
-            <Link to="/detail">詳細へ</Link>
+            <Link to="/detail" style={{ textDecoration: 'none' }}>詳細へ</Link>
           </Button>
         </CardActions>
       </Card>
@@ -118,7 +120,14 @@ const Home = () => {
 
   return (
     <div>
-      {cardComponents}
+      <AppBar position="static">
+        <Toolbar>
+          <Typography variant="h6"><Link to="/edit" style={{ textDecoration: 'none' }}>Create Card</Link></Typography>
+        </Toolbar>
+      </AppBar>
+      <div>
+        {cardComponents}
+      </div>
     </div>
   );
 }

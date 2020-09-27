@@ -83,6 +83,7 @@ const CardDetail = () => {
             <MathJax.Provider input="tex">
               <ReactMarkDown
                 source={card.comment}
+                skipHtml={false}
                 escapeHtml={false}
                 renderers={{
                   math: props => {
